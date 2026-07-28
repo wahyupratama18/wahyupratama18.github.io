@@ -1,0 +1,62 @@
+---
+const experiences = [
+  {
+    role: "IT Programmer",
+    company: "PT Unza Vitalis (Wipro Unza Indonesia)",
+    period: "April 2025 – Present",
+    descriptions: [
+      "Engineered and maintained internal enterprise applications deployed across Indonesia and regional-wide business units to support multi-country operations by writing structured, highly maintainable code within the Laravel ecosystem.",
+      "Automated cross-country data exchanges to ensure seamless and accurate information flow between international business teams by reliable synchronization and data integration workflows.",
+      "Accelerated regional feature rollouts to align tools used across diverse international offices by translating complex regional business requirements into clean, self-documenting codebases.",
+      "Optimized application deployment speed and reliability for internal releases by configuring local CI/CD pipelines and managing local server environments/infrastructure.",
+      "Accelerated regional feature rollouts to align tools used across diverse international offices by translating complex regional business requirements into clean, self-documenting codebases.",
+    ]
+  },
+  {
+    role: "Laboratory Assistant Coordinator",
+    company: "Universitas Negeri Malang",
+    period: "January 2023 – 2024",
+    descriptions: [
+      "Mentored and evaluated over 100+ undergraduate students across the Bachelor of Informatics and Educational Informatics programs by leading lab sessions and grading projects for Database Administration, Information Systems, and Educational Data Science courses.",
+      "Strengthened student comprehension of production-ready development and database optimization by designing hands-on curriculum modules and practical code reviews using SQL.",
+      "Bridged the gap between academic theory and practical software engineering to prepare students for industry roles by translating complex relational database design principles into scannable, actionable lab exercises.",
+      "Spearheaded the design and development of lab-centric web applications to support advanced academic research and student training by serving as the Lead Developer for the Website and Expert System Development Laboratory.",
+      "Engineered rule-based expert systems and full-stack modules to expand the laboratory's technical capabilities by building secure, decoupled components utilizing modern Web Services and RESTful APIs.",
+      "Maintained high availability of development testing grounds for students and faculty researchers by provisioning, monitoring, and managing the laboratory's local web hosting and deployment infrastructure.",
+    ]
+  },
+  {
+    role: "Software Developer (Internship)",
+    company: "CV Nusantara Tama",
+    period: "December 2018 – May 2019",
+    descriptions: [
+      "Delivered and optimized tailored web applications for enterprise-level clients by engineering robust Web Services and decoupled backend architectures within the PHP ecosystem.",
+      "Reduced long-term technical debt and system bugs across legacy client projects by authoring highly structured, self-documenting code and standardizing database schemas.",
+      "Accelerated feature deployment timelines within a fast-paced agency environment by collaborating in agile sprint teams and utilizing strict Git version control workflows.",
+    ]
+  }
+];
+---
+
+<section class="space-y-6">
+  <h2 class="text-2xl font-bold tracking-tight border-b border-slate-200 dark:border-slate-800 pb-2">Experience</h2>
+  <div class="space-y-8">
+    
+    {experiences.map((exp) => (
+      <div class="space-y-2">
+        <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+          <h3 class="text-lg font-semibold text-slate-900 dark:text-slate-100">
+            {exp.role} <span class="text-indigo-600 dark:text-indigo-400 font-normal">@ {exp.company}</span>
+          </h3>
+          <span class="text-xs text-slate-500 dark:text-slate-400">{exp.period}</span>
+        </div>
+        <ul class="list-disc list-inside space-y-1 text-slate-700 dark:text-slate-300 text-sm leading-relaxed">
+          {exp.descriptions.map((desc) => (
+            <li>{desc}</li>
+          ))}
+        </ul>
+      </div>
+    ))}
+
+  </div>
+</section>
